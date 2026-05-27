@@ -1,0 +1,345 @@
+/* =====================================================
+   AFL VISUALISATION - STYLESHEET
+   ===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+header {
+    background: linear-gradient(135deg, #1a3a52 0%, #2d5a7b 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+header p {
+    font-size: 1.25em;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* =====================================================
+   MAIN CONTAINER
+   ===================================================== */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =====================================================
+   SECTIONS
+   ===================================================== */
+
+section {
+    background: white;
+    padding: 45px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Intro section styling */
+.intro-section {
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+    border-left: 5px solid #1a3a52;
+    padding: 40px;
+}
+
+.intro-section h2 {
+    color: #1a3a52;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.intro-section p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Conclusion section styling */
+.conclusion-section {
+    background: linear-gradient(135deg, #f0f4f8 0%, #ffffff 100%);
+    border-left: 5px solid #1a3a52;
+}
+
+.conclusion-section h2 {
+    color: #1a3a52;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+.conclusion-section ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.conclusion-section li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+    line-height: 1.7;
+    color: #555;
+    font-size: 1.05em;
+}
+
+.conclusion-section li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #1a3a52;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+/* =====================================================
+   VISUALISATION SECTIONS
+   ===================================================== */
+
+.viz-section {
+    background: white;
+    padding: 45px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.viz-header h2 {
+    color: #1a3a52;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #2d5a7b;
+    padding-bottom: 10px;
+}
+
+.viz-header p {
+    color: #666;
+    font-size: 1em;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.visualization {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure Vega-Lite charts display properly */
+.visualization canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+.visualization svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.viz-caption {
+    font-size: 0.95em;
+    color: #888;
+    font-style: italic;
+    margin-top: 15px;
+    padding: 10px;
+    border-left: 3px solid #ddd;
+    padding-left: 15px;
+}
+
+/* =====================================================
+   TYPOGRAPHY
+   ===================================================== */
+
+h1 {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-weight: 600;
+    margin-top: 0;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+strong {
+    color: #1a3a52;
+    font-weight: 600;
+}
+
+a {
+    color: #2d5a7b;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+a:hover {
+    border-bottom-color: #2d5a7b;
+}
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    background: #1a3a52;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 60px;
+    border-top: 4px solid #2d5a7b;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 8px 0;
+    font-size: 0.95em;
+    opacity: 0.95;
+}
+
+.footer-content a {
+    color: #a0c4e8;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-content a:hover {
+    border-bottom-color: #a0c4e8;
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+   ===================================================== */
+
+@media (max-width: 768px) {
+    header {
+        padding: 50px 20px;
+        margin-bottom: 30px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    section,
+    .viz-section {
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+
+    .viz-header h2 {
+        font-size: 1.4em;
+    }
+
+    .viz-header p {
+        font-size: 0.95em;
+    }
+
+    .conclusion-section li {
+        padding-left: 25px;
+        font-size: 1em;
+    }
+
+    .visualization {
+        margin: 20px 0;
+    }
+
+    footer {
+        padding: 30px 20px;
+        margin-top: 40px;
+    }
+
+    .footer-content p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 40px 15px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header p {
+        font-size: 0.95em;
+    }
+
+    section,
+    .viz-section {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .viz-header h2 {
+        font-size: 1.2em;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* =====================================================
+   UTILITY CLASSES
+   ===================================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-muted {
+    color: #888;
+}
+
+.small-text {
+    font-size: 0.9em;
+}

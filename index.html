@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFL Teams Across Australia</title>
+    
+    <!-- Load Vega & Vega-Lite from CDN (no installation needed!) -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    
+    <!-- Your CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>AFL Teams Across Australia</h1>
+        <p>Exploring the Geographic Distribution, Success, and Impact of Australian Football League Teams</p>
+    </header>
+
+    <main class="container">
+        <!-- INTRODUCTION SECTION -->
+        <section class="intro-section">
+            <h2>Understanding AFL in Australia</h2>
+            <p>
+                The Australian Football League (AFL) is the elite professional competition in Australian rules football. 
+                With 18 teams spread across Australia, the league has a rich history dating back over 100 years. 
+                This visualisation explores how AFL teams are distributed geographically, their performance over time, 
+                and what factors contribute to their success.
+            </p>
+        </section>
+
+        <!-- VISUALISATION 1: GEOGRAPHIC MAP -->
+        <section class="viz-section">
+            <div class="viz-header">
+                <h2>Geographic Distribution of AFL Teams</h2>
+                <p>
+                    AFL teams are concentrated in certain states, particularly Victoria (home to 10 teams) 
+                    and Western Australia (2 teams). This map shows the location of each team's home ground.
+                </p>
+            </div>
+            <div id="vis-map" class="visualization"></div>
+            <p class="viz-caption">
+                <strong>Note:</strong> Team locations are based on home stadium. Multiple teams may share the same location in Melbourne.
+            </p>
+        </section>
+
+        <!-- VISUALISATION 2: TEAMS BY STATE -->
+        <section class="viz-section">
+            <div class="viz-header">
+                <h2>Number of AFL Teams by State</h2>
+                <p>
+                    Victoria dominates the AFL with 10 teams, while most other states have only 1-2 teams. 
+                    This reflects the sport's origins in Melbourne.
+                </p>
+            </div>
+            <div id="vis-teams-by-state" class="visualization"></div>
+        </section>
+
+        <!-- VISUALISATION 3: PREMIERSHIP WINS BY STATE -->
+        <section class="viz-section">
+            <div class="viz-header">
+                <h2>Premiership Wins by State</h2>
+                <p>
+                    Victoria teams have won the vast majority of premierships in AFL history. 
+                    However, Western Australian teams have been competitive in recent decades.
+                </p>
+            </div>
+            <div id="vis-premierships-by-state" class="visualization"></div>
+        </section>
+
+        <!-- VISUALISATION 4: TOP TEAMS ALL-TIME WINS -->
+        <section class="viz-section">
+            <div class="viz-header">
+                <h2>Top 10 Teams by All-Time Wins</h2>
+                <p>
+                    Some AFL teams have accumulated significantly more wins than others. 
+                    Carlton, Melbourne, and Essendon lead in total wins across their histories.
+                </p>
+            </div>
+            <div id="vis-top-teams" class="visualization"></div>
+        </section>
+
+        <!-- VISUALISATION 5: PREMIERSHIP WINS BY TEAM -->
+        <section class="viz-section">
+            <div class="viz-header">
+                <h2>Premiership Wins by Team</h2>
+                <p>
+                    Essendon and Carlton lead with 16 premierships each. Richmond and Melbourne are also successful with 13 and 12 premierships respectively.
+                </p>
+            </div>
+            <div id="vis-premierships-by-team" class="visualization"></div>
+        </section>
+
+        <!-- VISUALISATION 6: LINE CHART - SEASON PERFORMANCE TREND -->
+        <section class="viz-section">
+            <div class="viz-header">
+                <h2>Average Team Wins Over Recent Seasons (2015-2023)</h2>
+                <p>
+                    This chart shows the average number of wins per team season over the past decade. 
+                    A slight decline in average wins suggests more competitive balance.
+                </p>
+            </div>
+            <div id="vis-season-trend" class="visualization"></div>
+        </section>
+
+        <!-- VISUALISATION 7: FOUNDING YEAR DISTRIBUTION -->
+        <section class="viz-section">
+            <div class="viz-header">
+                <h2>When Were AFL Teams Founded?</h2>
+                <p>
+                    Most AFL teams were founded in the 1800s. Newer additions (Gold Coast Suns, Greater Western Sydney Giants) 
+                    joined in the 2010s to expand the competition nationally.
+                </p>
+            </div>
+            <div id="vis-founding-year" class="visualization"></div>
+        </section>
+
+        <!-- VISUALISATION 8: WIN/LOSS RATIO SCATTER PLOT -->
+        <section class="viz-section">
+            <div class="viz-header">
+                <h2>Team Win/Loss Ratio vs History (All-Time)</h2>
+                <p>
+                    Teams with longer histories have accumulated more total wins. The scatter shows how win percentage 
+                    varies by age of franchise.
+                </p>
+            </div>
+            <div id="vis-scatter" class="visualization"></div>
+        </section>
+
+        <!-- VISUALISATION 9: STADIUM CAPACITY -->
+        <section class="viz-section">
+            <div class="viz-header">
+                <h2>AFL Stadium Capacities</h2>
+                <p>
+                    The MCG in Melbourne is the world's largest stadium by capacity at over 100,000 seats. 
+                    Stadium size influences team revenue and fan experience.
+                </p>
+            </div>
+            <div id="vis-stadiums" class="visualization"></div>
+        </section>
+
+        <!-- VISUALISATION 10: TEAM RANKINGS (CUSTOM) -->
+        <section class="viz-section">
+            <div class="viz-header">
+                <h2>Overall Team Success Ranking (Wins + Premierships)</h2>
+                <p>
+                    This ranking combines all-time wins and premiership victories to identify the most successful AFL franchises. 
+                    Essendon, Carlton, and Collingwood emerge as the top teams.
+                </p>
+            </div>
+            <div id="vis-rankings" class="visualization"></div>
+        </section>
+
+        <!-- CONCLUSIONS SECTION -->
+        <section class="conclusion-section">
+            <h2>Key Insights</h2>
+            <ul>
+                <li><strong>Geographic Concentration:</strong> Victoria dominates with 10 of 18 AFL teams, reflecting the sport's origins.</li>
+                <li><strong>Historical Success:</strong> Older teams (founded in 1800s) have accumulated more wins and premierships.</li>
+                <li><strong>Competitive Balance:</strong> Recent seasons show more competitive balance, with several teams capable of winning premierships.</li>
+                <li><strong>Stadium Influence:</strong> Larger stadiums enable more revenue and resources for successful teams.</li>
+                <li><strong>National Expansion:</strong> Newer teams from Queensland and New South Wales represent AFL's national growth.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p><strong>AFL Data Visualisation</strong></p>
+            <p>Created by: [Your Name] | Date: May 2026</p>
+            <p>
+                Data Sources: 
+                <a href="https://www.afldata.com.au/" target="_blank">AFL Data</a>, 
+                <a href="https://www.afl.com.au/" target="_blank">AFL Official</a>, 
+                <a href="https://en.wikipedia.org/wiki/AFL" target="_blank">Wikipedia AFL</a>
+            </p>
+            <p>
+                Visualisation created using <a href="https://vega.github.io/vega-lite/" target="_blank">Vega-Lite</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Load your visualisation script -->
+    <script src="script.js"></script>
+</body>
+</html>
